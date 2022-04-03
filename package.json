@@ -1,6 +1,6 @@
 {
   "name": "decentralize",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Connect decentralized technology stacks together",
   "main": "index.js",
   "scripts": {
@@ -28,5 +28,6 @@
   },
   "directories": {
     "example": "examples"
-  }
+  },
+  "devDependencies": {}
 }
