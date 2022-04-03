@@ -1,6 +1,6 @@
 {
   "name": "decentralize",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Connect decentralized technology stacks together",
   "main": "index.js",
   "scripts": {
@@ -24,5 +24,9 @@
     "bugout": "^0.0.12",
     "gun": "^0.2020.1236",
     "wrtc": "^0.4.7"
-  }
+  },
+  "directories": {
+    "example": "examples"
+  },
+  "devDependencies": {}
 }
