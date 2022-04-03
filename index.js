@@ -17,14 +17,25 @@ const Decentralize = function(params){
 
   let last
   decentralize.on('data', data => {
-    if(last === data) return
     let type = Object.keys(data)[0]
     for(let adapter in params.adapters){
-      if(type !== adapter && Object.keys(params.adapters[adapter]).length > 0){
+      if(last === data) return
+      if(type !== adapter && Object.keys(params.adapters[adapter]).length > 0 && decentralize.route[adapter]){
         decentralize.route[adapter](data[type].data)
       }
     }
     last = data
+  })
+  process.on('SIGINT', ()=>{
+    decentralize.emit('close')
+    for(let adapter in params.adapters){
+      if(Object.keys(params.adapters[adapter]).length > 0 && decentralize.route[adapter]){
+        decentralize.route[adapter]('{decentralize: close}')
+      }
+    }
+    setTimeout(()=>{
+      process.exit(1)
+    },50)
   })
 }
 module.exports = Decentralize
