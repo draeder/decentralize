@@ -1,0 +1,28 @@
+{
+  "name": "decentralize",
+  "version": "1.0.0",
+  "description": "Connect decentralized technology stacks together",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/draeder/decentralize.git"
+  },
+  "keywords": [
+    "p2p",
+    "decentralization"
+  ],
+  "author": "Daniel Raeder",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/draeder/decentralize/issues"
+  },
+  "homepage": "https://github.com/draeder/decentralize#readme",
+  "dependencies": {
+    "bugout": "^0.0.12",
+    "gun": "^0.2020.1236",
+    "wrtc": "^0.4.7"
+  }
+}
